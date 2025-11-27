@@ -36,13 +36,15 @@ export const Header = () => {
           <div className={styles.center}>
             <div className={styles.searchBarContainer}>
               <form className={styles.searchForm} onSubmit={handleSearch}>
-                <input
-                  type="text"
-                  className={styles.searchInput}
-                  placeholder="Искать на CHROMAKOPIA"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
+                <div className={styles.searchInputContainer}>
+                  <input
+                    type="text"
+                    className={styles.searchInput}
+                    placeholder="Искать на CHROMAKOPIA"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                </div>
                 <button type="submit" className={styles.searchButton}>
                   <SearchIcon />
                 </button>
