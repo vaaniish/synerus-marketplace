@@ -1,7 +1,10 @@
 // src/components/Header/Header.jsx
 import { useState } from "react";
-import { SearchIcon } from "./Icons";
-import { AccountTextButton, OrdersTextButton, FavoriteTextButton, CartTextButton } from "./TextIconButtons";
+import { SearchIcon } from "./TextButtons/Icons";
+import { AccountTextButton } from "./TextButtons/AccountTextButton";
+import { OrdersTextButton } from "./TextButtons/OrdersTextButton";
+import { FavoriteTextButton } from "./TextButtons/FavoriteTextButton";
+import { CartTextButton } from "./TextButtons/CartTextButton";
 import styles from "./Header.module.css";
 
 export const Header = () => {
@@ -40,7 +43,7 @@ export const Header = () => {
                   <input
                     type="text"
                     className={styles.searchInput}
-                    placeholder="Искать на CHROMAKOPIA"
+                    placeholder="Искать на CHROMAKOPIA..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
